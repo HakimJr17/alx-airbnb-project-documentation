@@ -12,15 +12,15 @@
 
 * Request Body:
 
-  * firstName (string, required)
+  * first_name (string, required)
 
-  * lastName (string, required)
+  * last_name (string, required)
 
   * email (string, required)
 
   * password (string, required)
 
-  * phoneNumber (string, optional)
+  * phone_number (string, optional)
 
   * role (string, required, enum: guest, host)
 
@@ -38,13 +38,13 @@
 
 * Validation Rules:
 
- * email must be a valid email format.
+   * email must be a valid email format.
 
- * password must be at least 8 characters long.
+   * password must be at least 8 characters long.
 
- * role must be either guest or host.
+   * role must be either guest or host.
 
- * firstName and lastName cannot be empty.
+   * firstName and lastName cannot be empty.
 
 * Performance: Response time must be under 200ms.
 
@@ -94,7 +94,7 @@
 
   * location (string, required)
 
-  * pricePerNight (decimal, required)
+  * price_per_night (decimal, required)
 
   * amenities (array of strings, optional)
 
@@ -110,7 +110,7 @@
 
   * name and location cannot be empty.
 
-  * pricePerNight must be a positive number.
+  * price_per_night must be a positive number.
 
 * Performance: Response time must be under 500ms (to account for image uploads).
 
@@ -123,7 +123,7 @@
 
   * Status Code: 200 OK
 
-  * Body: [ { "property_id": "uuid", "name": "string", "location": "string", "pricePerNight": "decimal", ... }, ... ]
+  * Body: [ { "property_id": "uuid", "name": "string", "location": "string", "price_per_night": "decimal", ... }, ... ]
 
 * Performance: Response time must be under 300ms.
 
@@ -141,9 +141,9 @@
 
   * property_id (uuid, required)
 
-  * startDate (date, required, format: YYYY-MM-DD)
+  * start_date (date, required, format: YYYY-MM-DD)
 
-  * endDate (date, required, format: YYYY-MM-DD)
+  * end_date (date, required, format: YYYY-MM-DD)
 
 * Response (Success):
 
@@ -153,7 +153,7 @@
 
 * Validation Rules:
 
-  * startDate must be before endDate.
+  * start_date must be before end_date.
 
   * Dates cannot be in the past.
 
@@ -193,7 +193,7 @@
 
   * amount (decimal, required)
 
-  * paymentMethod (string, required, e.g., "credit_card", "paypal")
+  * payment_method (string, required, e.g., "credit_card", "paypal")
 
 * Response (Success):
 
